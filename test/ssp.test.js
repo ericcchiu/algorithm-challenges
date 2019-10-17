@@ -4,6 +4,8 @@ const isOldEnoughToDrink = require('../SSP/1_isOldEnoughtToDrink.js');
 const isOldEnoughToDrive = require('../SSP/2_isOldEnoughToDrive.js');
 const isOldEnoughToVote = require('../SSP/3_isOldEnoughToVote.js');
 const isOldEnoughToDrinkAndDrive = require('../SSP/4_isOldEnoughtToDrinkAndDrive.js');
+const getProperty = require('../SSP/5_getProperty.js');
+const addProperty = require('../SSP/6_addProperty.js');
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -48,6 +50,38 @@ describe('SSP Problems', function() {
     });
     it("should return false", function() {
       expect(isOldEnoughToDrinkAndDrive(99999)).to.be.false;
+    });
+  });
+
+  describe("getProperty", function () {
+    var obj;
+
+    beforeEach(function () {
+      obj = {
+        name: "You"
+      }
+    });
+
+    it("should return the value of the property located in the object at the passed in key", function () {
+      expect(getProperty(obj, "name")).to.equal("You");
+    });
+    it("should return undefined when there is no property at the passed in key", function () {
+      expect(getProperty(obj, "age")).to.equal(undefined);
+    });
+  });
+
+  describe("addProperty", function () {
+    var testObj;
+    beforeEach(function () {
+      testObj = {};
+    });
+    it("should add a property to the passed in object at the passed in key", function () {
+      addProperty(testObj, "testKey");
+      expect(testObj.testKey).to.be.true;
+    });
+    it("should set the value at the passed in key to true on the passed in object", function () {
+      addProperty(testObj, "testKey");
+      expect(testObj.testKey).to.be.true;
     });
   });
 }); 
