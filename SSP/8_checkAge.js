@@ -13,6 +13,6 @@ const checkAge = (name, age) => age >= 21 ? `Welcome, ${name}!` : `Go home, ${na
 
 
 let output = checkAge('Adrian', 22);
-console.log(output); // --> 'Welcome, Adrian!'
+// console.log(output); // --> 'Welcome, Adrian!'
 
 module.exports = checkAge; 

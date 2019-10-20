@@ -11,6 +11,9 @@ const getFullName = require('../SSP/9_getFullName.js');
 const getLengthOfWord = require('../SSP/10_getLengthOfWord.js');
 const getLengthOfTwoWords = require('../SSP/11_getLengthOfTwoWords.js');
 const isGreaterThan10 = require('../SSP/12_isGreaterThanTen.js'); 
+const isLessThan30 = require('../SSP/13_isLessThan30.js');
+const equalsTen = require('../SSP/14_equalsTen.js');
+const isLessThan = require('../SSP/15_isLessThan.js');
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -135,7 +138,7 @@ describe('SSP Problems', function() {
     });
   });
 
-  describe('isGreaterThan10', function() {
+  describe('#isGreaterThan10()', function() {
     it('should return a boolean', function() {
       expect(isGreaterThan10(40)).to.be.a('boolean');
     });
@@ -149,5 +152,46 @@ describe('SSP Problems', function() {
       expect(isGreaterThan10(10)).to.be.false;
     });
   });
+
+  describe("#isLessThan30()", function() {
+    it("should return a boolean", function() {
+      expect(isLessThan30(40)).to.be.a('boolean');
+    });
+    it("should return true for a number less than 30", function() {
+      expect(isLessThan30(4)).to.be.true;
+    });
+    it("should return false for a number greater than 30", function() {
+      expect(isLessThan30(400)).to.be.false;
+    });
+    it("should return false for the number 30", function() {
+      expect(isLessThan30(30)).to.be.false;
+    });
+  });
   
+  describe("#equalsTen()", function() {
+    it("should return a boolean", function() {
+      expect(equalsTen(10)).to.be.a("boolean");
+    });
+    it("should return true for the number 10", function() {
+      expect(equalsTen(10)).to.be.true;
+    });
+    it("should return false for a number greater than 10", function() {
+      expect(equalsTen(400)).to.be.false;
+    });
+    it("should return false for the number 10", function() {
+      expect(equalsTen(3)).to.be.false;
+    });
+  });
+
+  describe("#isLessThan()", function() {
+    it("should return a boolean", function() {
+      expect(isLessThan(40, 30)).to.be.a("boolean");
+    });
+    it("should return whether num2 is less than num1", function() {
+      expect(isLessThan(20, 200)).to.be.false;
+    });
+    it("should return false if the numbers are equal", function() {
+      expect(isLessThan(20, 20)).to.be.false;
+    });
+  });
 }); 

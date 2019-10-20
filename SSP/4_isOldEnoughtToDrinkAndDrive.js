@@ -8,6 +8,6 @@ Notes:
 
 const isOldEnoughToDrinkAndDrive = age => false; 
 
-console.log(isOldEnoughToDrinkAndDrive(44));
+// console.log(isOldEnoughToDrinkAndDrive(44));
 
 module.exports = isOldEnoughToDrinkAndDrive;

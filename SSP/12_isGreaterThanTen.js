@@ -10,6 +10,6 @@ const isGreaterThan10 = num => num > 10 ? true : false;
 
 
 let output = isGreaterThan10(11);
-console.log(output); // --> true
+// console.log(output); // --> true
 
 module.exports = isGreaterThan10; 

@@ -7,7 +7,7 @@ Notes:
 
 const isOldEnoughToDrink = (age) => age >= 21 ? true : false;
 
-console.log('21 is old enough to drink:', isOldEnoughToDrink(21));
+// console.log('21 is old enough to drink:', isOldEnoughToDrink(21));
 
 module.exports = isOldEnoughToDrink;
 

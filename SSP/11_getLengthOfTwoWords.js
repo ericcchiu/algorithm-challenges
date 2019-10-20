@@ -9,7 +9,7 @@ Given 2 words, “getLengthOfTwoWords” returns the sum of their lengths.
 const getLengthOfTwoWords = (word1, word2) => word1.length + word2.length; 
 
 let output = getLengthOfTwoWords('some', 'words');
-console.log(output); // --> 9
+// console.log(output); // --> 9
 
 module.exports = getLengthOfTwoWords; 
 

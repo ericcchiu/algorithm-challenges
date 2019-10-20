@@ -7,6 +7,6 @@ Notes:
 
 const isOldEnoughToVote = age => age >= 18 ? true : false; 
 
-console.log(isOldEnoughToVote(24));
+// console.log(isOldEnoughToVote(24));
 
 module.exports = isOldEnoughToVote;

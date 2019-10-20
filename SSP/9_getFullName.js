@@ -9,6 +9,6 @@ Given a first and a last name, “getFullName” returns a single string with th
 const getFullName = (firstName, lastName) => `${firstName} ${lastName}`; 
 
 let output = getFullName('Joe', 'Smith');
-console.log(output); // --> 'Joe Smith'
+// console.log(output); // --> 'Joe Smith'
 
 module.exports = getFullName; 

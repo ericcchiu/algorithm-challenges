@@ -16,6 +16,6 @@ const getProperty = (obj, key) => obj[key] ? obj[key] : undefined;
 const obj = {
   key: 'value'
 };
-console.log(getProperty(obj, 'key'));
+// console.log(getProperty(obj, 'key'));
 
 module.exports = getProperty;

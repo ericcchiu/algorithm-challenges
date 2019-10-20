@@ -17,6 +17,6 @@ const obj = {
   age: 20
 }
 removeProperty(obj, 'name');
-console.log(obj.name); // --> undefined
+// console.log(obj.name); // --> undefined
 
 module.exports = removeProperty;

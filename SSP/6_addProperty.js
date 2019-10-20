@@ -11,6 +11,6 @@ const addProperty = (obj, key) => obj[key] = true;
 
 const myObj = {};
 addProperty(myObj, 'myProperty');
-console.log(myObj.myProperty); // --> true
+// console.log(myObj.myProperty); // --> true
 
 module.exports = addProperty;

@@ -7,6 +7,6 @@ Notes:
 
 const isOldEnoughToDrive = age => age >= 16 ? true : false;
 
-console.log(isOldEnoughToDrive(17));
+// console.log(isOldEnoughToDrive(17));
 
 module.exports = isOldEnoughToDrive;
