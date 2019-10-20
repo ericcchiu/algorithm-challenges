@@ -12,4 +12,3 @@ let output = getFullName('Joe', 'Smith');
 console.log(output); // --> 'Joe Smith'
 
 module.exports = getFullName; 
-

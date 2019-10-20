@@ -8,6 +8,9 @@ const getProperty = require('../SSP/5_getProperty.js');
 const addProperty = require('../SSP/6_addProperty.js');
 const checkAge = require('../SSP/8_checkAge.js');
 const getFullName = require('../SSP/9_getFullName.js');
+const getLengthOfWord = require('../SSP/10_getLengthOfWord.js');
+const getLengthOfTwoWords = require('../SSP/11_getLengthOfTwoWords.js');
+const isGreaterThan10 = require('../SSP/12_isGreaterThanTen.js'); 
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -102,12 +105,49 @@ describe('SSP Problems', function() {
     });
   });
 
-  describe("#getFullName()", function() {
-    it("should return a string", function() {
-      expect(getFullName("Rebecca", "Solnit")).to.be.a('string');
+  describe('#getFullName()', function() {
+    it('should return a string', function() {
+      expect(getFullName('Rebecca', 'Solnit')).to.be.a('string');
     });
-    it("should return a full name using firstName and lastName", function() {
-      expect(getFullName("Rebecca", "Solnit")).to.equal("Rebecca Solnit");
+    it('should return a full name using firstName and lastName', function() {
+      expect(getFullName('Rebecca', 'Solnit')).to.equal('Rebecca Solnit');
     });
   });
+
+  describe('#getLengthOfWord()', function() {
+    it('should return a number', function() {
+      expect(getLengthOfWord('something')).to.be.a('number');
+    });
+    it('should return the length of the passed in word', function() {
+      expect(getLengthOfWord('random')).to.equal(6);
+    });
+    it('should return the length of an empty word', function() {
+      expect(getLengthOfWord('')).to.equal(0);
+    });
+  });
+
+  describe('#getLengthOfTwoWords()', function() {
+    it('should return a number', function() {
+      expect(getLengthOfTwoWords('two', 'words')).to.be.a('number');
+    });
+    it('should return the sum length of two words', function() {
+      expect(getLengthOfTwoWords('one', 'two')).to.equal(6);
+    });
+  });
+
+  describe('isGreaterThan10', function() {
+    it('should return a boolean', function() {
+      expect(isGreaterThan10(40)).to.be.a('boolean');
+    });
+    it('should return false for a number less than 10', function() {
+      expect(isGreaterThan10(4)).to.be.false;
+    });
+    it('should return true for a number greater than 10', function() {
+      expect(isGreaterThan10(40)).to.be.true;
+    });
+    it('should return false for the number 10', function() {
+      expect(isGreaterThan10(10)).to.be.false;
+    });
+  });
+  
 }); 
