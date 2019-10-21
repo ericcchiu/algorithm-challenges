@@ -7,9 +7,9 @@ Given 2 numbers, “isLessThan” returns whether num2 is less than num1.
   console.log(output); // --> true
 */
 
-const isLessThan = (num1, num2) => num2 < num1 ? true : false; 
+const isLessThan = (num1, num2) => num2 < num1; 
 
 let output = isLessThan(9, 4);
-console.log(output); // --> true
+// console.log(output); // --> true
 
 module.exports = isLessThan;

@@ -14,6 +14,7 @@ const isGreaterThan10 = require('../SSP/12_isGreaterThanTen.js');
 const isLessThan30 = require('../SSP/13_isLessThan30.js');
 const equalsTen = require('../SSP/14_equalsTen.js');
 const isLessThan = require('../SSP/15_isLessThan.js');
+const isGreaterThan = require('../SSP/16_isGreaterThan.js');
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -192,6 +193,18 @@ describe('SSP Problems', function() {
     });
     it("should return false if the numbers are equal", function() {
       expect(isLessThan(20, 20)).to.be.false;
+    });
+  });
+
+  describe("isGreaterThan", function() {
+    it("should return a boolean", function() {
+      expect(typeof isGreaterThan(40, 30)).to.equal("boolean");
+    });
+    it("should return whether num2 is greater than num1", function() {
+      expect(isGreaterThan(20, 200)).to.be.true;
+    });
+    it("should return false if the numbers are equal", function() {
+      expect(isGreaterThan(20, 20)).to.be.false;
     });
   });
 }); 
