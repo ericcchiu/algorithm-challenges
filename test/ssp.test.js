@@ -15,6 +15,10 @@ const isLessThan30 = require('../SSP/13_isLessThan30.js');
 const equalsTen = require('../SSP/14_equalsTen.js');
 const isLessThan = require('../SSP/15_isLessThan.js');
 const isGreaterThan = require('../SSP/16_isGreaterThan.js');
+const isEqualTo = require('../SSP/17_isEqualTo.js');
+const isEven = require('../SSP/18_isEven.js');
+const isOdd = require('../SSP/19_isOdd.js');
+const isSameLength = require('../SSP/20_isSameLength.js');
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -196,7 +200,7 @@ describe('SSP Problems', function() {
     });
   });
 
-  describe("isGreaterThan", function() {
+  describe("#isGreaterThan()", function() {
     it("should return a boolean", function() {
       expect(typeof isGreaterThan(40, 30)).to.equal("boolean");
     });
@@ -207,4 +211,56 @@ describe('SSP Problems', function() {
       expect(isGreaterThan(20, 20)).to.be.false;
     });
   });
+
+  describe("#isEqualTo()", function() {
+    it("should return a boolean", function() {
+      expect(isEqualTo(40, 30)).to.be.a("boolean");
+    });
+    it("should return false if num2 is greater than num1", function() {
+      expect(isEqualTo(20, 200)).to.be.false;
+    });
+    it("should return false if num2 is less than num1", function() {
+      expect(isEqualTo(20, 2)).to.be.false;
+    });
+    it("should return true if the numbers are equal", function() {
+      expect(isEqualTo(20, 20)).to.be.true;
+    });
+  });
+
+  describe("#isEven()", function() {
+    it("should return a boolean", function() {
+      expect(isEven(40)).to.be.a("boolean");
+    });
+    it("should return if the number is even", function() {
+      expect(isEven(8)).to.be.true;
+    });
+    it("should return true if the number is 0", function() {
+      expect(isEven(0)).to.be.true;
+    });
+  });
+
+  describe("#isOdd()", function() {
+    it("should return a boolean", function() {
+      expect(isOdd(40)).to.be.a("boolean");
+    });
+    it("should return true if the number is odd", function() {
+      expect(isOdd(7)).to.be.true;
+    });
+    it("should return false if the number is 0", function() {
+      expect(isOdd(0)).to.be.false;
+    });
+  });
+
+  describe("#isSameLength()", function() {
+    it("should return a boolean", function() {
+      expect(isSameLength("hi", "there")).to.be.a("boolean");
+    });
+    it("should return true if the two words are the same length", function() {
+      expect(isSameLength("yes", "you")).to.be.true;
+    });
+    it("should return false if the two words are not the same length", function() {
+      expect(isSameLength("hi", "there")).to.be.false;
+    });
+  });
+
 }); 
