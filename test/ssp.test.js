@@ -19,6 +19,8 @@ const isEqualTo = require('../SSP/17_isEqualTo.js');
 const isEven = require('../SSP/18_isEven.js');
 const isOdd = require('../SSP/19_isOdd.js');
 const isSameLength = require('../SSP/20_isSameLength.js');
+const areBothOdd = require('../SSP/21_areBothOdd.js');
+const isEitherEven = require('../SSP/22_isEitherEven.js');
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -260,6 +262,39 @@ describe('SSP Problems', function() {
     });
     it("should return false if the two words are not the same length", function() {
       expect(isSameLength("hi", "there")).to.be.false;
+    });
+  });
+
+  describe("#areBothOdd()", function () {
+    it("should return a boolean", function () {
+      expect(areBothOdd(40, 3)).to.be.a("boolean");
+    });
+    it("should return true if both numbers are odd", function () {
+      expect(areBothOdd(41, 3)).to.be.true;
+    });
+    it("should return false if the first number is even", function () {
+      expect(areBothOdd(4, 3)).to.be.false;
+    });
+    it("should return false if the second number is even", function () {
+      expect(areBothOdd(5, 30)).to.be.false;
+    });
+  });
+
+  describe("#isEitherEven()", function () {
+    it("should return a boolean", function () {
+      expect(isEitherEven(40, 3)).to.be.a("boolean");
+    });
+    it("should return true if the first number is even", function () {
+      expect(isEitherEven(4, 3)).to.be.true;
+    });
+    it("should return true if the second number is even", function () {
+      expect(isEitherEven(7, 30)).to.be.true;
+    });
+    it("should return true if the both numbers are even", function () {
+      expect(isEitherEven(70, 30)).to.be.true;
+    });
+    it("should return false if both numbers are odd", function () {
+      expect(isEitherEven(71, 31)).to.be.false;
     });
   });
 
