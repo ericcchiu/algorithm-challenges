@@ -21,6 +21,7 @@ const isOdd = require('../SSP/19_isOdd.js');
 const isSameLength = require('../SSP/20_isSameLength.js');
 const areBothOdd = require('../SSP/21_areBothOdd.js');
 const isEitherEven = require('../SSP/22_isEitherEven.js');
+const isEvenLength = require('../SSP/23_isEvenLength.js');
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -295,6 +296,18 @@ describe('SSP Problems', function() {
     });
     it("should return false if both numbers are odd", function () {
       expect(isEitherEven(71, 31)).to.be.false;
+    });
+  });
+
+  describe("#isEvenLength()", function () {
+    it("should return a boolean", function () {
+      expect(isEvenLength("wow")).to.be.a('boolean');
+    });
+    it('should return if the length of the word is even', function () {
+      expect(isEvenLength('specials')).to.be.true;
+    });
+    it('should return true if the string is empty', function () {
+      expect(isEvenLength('')).to.be.true;
     });
   });
 
