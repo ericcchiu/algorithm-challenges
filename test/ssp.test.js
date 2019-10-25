@@ -25,7 +25,8 @@ const isEvenLength = require('../SSP/23_isEvenLength.js');
 const isEvenAndGreaterThanTen = require('../SSP/24_isEvenAndGreaterThan10.js');
 const isOddLength = require('../SSP/25_isOddLength.js');
 const average = require('../SSP/26_average.js');
-const computeAreaOfTriangle = require('../SSP/27_computeAreaOfTriangle.js');
+const computeAreaOfATriangle = require('../SSP/27_computeAreaOfTriangle.js');
+const cube = require('../SSP/28_cube.js');
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -362,5 +363,23 @@ describe('SSP Problems', function() {
       expect(computeAreaOfATriangle(6, 4)).to.equal(12);
     });
   });
+
+  describe("#cube()", function () {
+    it("should_cube_a_positive_number", function () {
+      expect(cube(2)).to.equal(8);
+    });
+
+    it("should_cube_0", function () {
+      expect(cube(0)).to.equal(0);
+    });
+
+    it("should_cube_a_number_greater_than_10", function () {
+      expect(cube(12)).to.equal(1728);
+    });
+
+    it("should_cube_a_negative_number", function () {
+      expect(cube(-5)).to.equal(-125);
+    });
+  })
 
 }); 
