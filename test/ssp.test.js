@@ -22,6 +22,7 @@ const isSameLength = require('../SSP/20_isSameLength.js');
 const areBothOdd = require('../SSP/21_areBothOdd.js');
 const isEitherEven = require('../SSP/22_isEitherEven.js');
 const isEvenLength = require('../SSP/23_isEvenLength.js');
+const isEvenAndGreaterThanTen = require('../SSP/24_isEvenAndGreaterThan10.js');
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -308,6 +309,24 @@ describe('SSP Problems', function() {
     });
     it('should return true if the string is empty', function () {
       expect(isEvenLength('')).to.be.true;
+    });
+  });
+
+  describe("isEvenAndGreaterThanTen", function () {
+    it("should return a boolean", function () {
+      expect(isEvenAndGreaterThanTen(40)).to.be.a('boolean');
+    });
+    it('should return true if the number is even and greater than 10', function () {
+      expect(isEvenAndGreaterThanTen(80)).to.be.true;
+    });
+    it('should return false if the number is odd', function () {
+      expect(isEvenAndGreaterThanTen(91)).to.be.false;
+    });
+    it('should return false if the number is less than 10', function () {
+      expect(isEvenAndGreaterThanTen(8)).to.be.false;
+    });
+    it('should return false if the number is 10', function () {
+      expect(isEvenAndGreaterThanTen(10)).to.be.false;
     });
   });
 
