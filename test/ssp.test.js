@@ -25,6 +25,7 @@ const isEvenLength = require('../SSP/23_isEvenLength.js');
 const isEvenAndGreaterThanTen = require('../SSP/24_isEvenAndGreaterThan10.js');
 const isOddLength = require('../SSP/25_isOddLength.js');
 const average = require('../SSP/26_average.js');
+const computeAreaOfTriangle = require('../SSP/27_computeAreaOfTriangle.js');
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -353,5 +354,13 @@ describe('SSP Problems', function() {
     });
   });
 
+  describe("#computeAreaOfATriangle()", function () {
+    it("should return a number", function () {
+      expect(computeAreaOfATriangle(6, 4)).to.be.a("number");
+    });
+    it("should return the area of a triangle", function () {
+      expect(computeAreaOfATriangle(6, 4)).to.equal(12);
+    });
+  });
 
 }); 
