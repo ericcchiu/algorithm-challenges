@@ -24,6 +24,7 @@ const isEitherEven = require('../SSP/22_isEitherEven.js');
 const isEvenLength = require('../SSP/23_isEvenLength.js');
 const isEvenAndGreaterThanTen = require('../SSP/24_isEvenAndGreaterThan10.js');
 const isOddLength = require('../SSP/25_isOddLength.js');
+const average = require('../SSP/26_average.js');
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -342,5 +343,15 @@ describe('SSP Problems', function() {
       expect(isOddLength('')).to.be.false;
     });
   });
+
+  describe("#average()", function () {
+    it("should return a number", function () {
+      expect(average(1, 12)).to.be.a("number");
+    });
+    it("should return the average of two numbers", function () {
+      expect(average(2, 4)).to.equal(3);
+    });
+  });
+
 
 }); 
