@@ -23,6 +23,7 @@ const areBothOdd = require('../SSP/21_areBothOdd.js');
 const isEitherEven = require('../SSP/22_isEitherEven.js');
 const isEvenLength = require('../SSP/23_isEvenLength.js');
 const isEvenAndGreaterThanTen = require('../SSP/24_isEvenAndGreaterThan10.js');
+const isOddLength = require('../SSP/25_isOddLength.js');
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -162,147 +163,147 @@ describe('SSP Problems', function() {
     });
   });
 
-  describe("#isLessThan30()", function() {
-    it("should return a boolean", function() {
+  describe('#isLessThan30()', function() {
+    it('should return a boolean', function() {
       expect(isLessThan30(40)).to.be.a('boolean');
     });
-    it("should return true for a number less than 30", function() {
+    it('should return true for a number less than 30', function() {
       expect(isLessThan30(4)).to.be.true;
     });
-    it("should return false for a number greater than 30", function() {
+    it('should return false for a number greater than 30', function() {
       expect(isLessThan30(400)).to.be.false;
     });
-    it("should return false for the number 30", function() {
+    it('should return false for the number 30', function() {
       expect(isLessThan30(30)).to.be.false;
     });
   });
   
-  describe("#equalsTen()", function() {
-    it("should return a boolean", function() {
-      expect(equalsTen(10)).to.be.a("boolean");
+  describe('#equalsTen()', function() {
+    it('should return a boolean', function() {
+      expect(equalsTen(10)).to.be.a('boolean');
     });
-    it("should return true for the number 10", function() {
+    it('should return true for the number 10', function() {
       expect(equalsTen(10)).to.be.true;
     });
-    it("should return false for a number greater than 10", function() {
+    it('should return false for a number greater than 10', function() {
       expect(equalsTen(400)).to.be.false;
     });
-    it("should return false for the number 10", function() {
+    it('should return false for the number 10', function() {
       expect(equalsTen(3)).to.be.false;
     });
   });
 
-  describe("#isLessThan()", function() {
-    it("should return a boolean", function() {
-      expect(isLessThan(40, 30)).to.be.a("boolean");
+  describe('#isLessThan()', function() {
+    it('should return a boolean', function() {
+      expect(isLessThan(40, 30)).to.be.a('boolean');
     });
-    it("should return whether num2 is less than num1", function() {
+    it('should return whether num2 is less than num1', function() {
       expect(isLessThan(20, 200)).to.be.false;
     });
-    it("should return false if the numbers are equal", function() {
+    it('should return false if the numbers are equal', function() {
       expect(isLessThan(20, 20)).to.be.false;
     });
   });
 
-  describe("#isGreaterThan()", function() {
-    it("should return a boolean", function() {
-      expect(typeof isGreaterThan(40, 30)).to.equal("boolean");
+  describe('#isGreaterThan()', function() {
+    it('should return a boolean', function() {
+      expect(typeof isGreaterThan(40, 30)).to.equal('boolean');
     });
-    it("should return whether num2 is greater than num1", function() {
+    it('should return whether num2 is greater than num1', function() {
       expect(isGreaterThan(20, 200)).to.be.true;
     });
-    it("should return false if the numbers are equal", function() {
+    it('should return false if the numbers are equal', function() {
       expect(isGreaterThan(20, 20)).to.be.false;
     });
   });
 
-  describe("#isEqualTo()", function() {
-    it("should return a boolean", function() {
-      expect(isEqualTo(40, 30)).to.be.a("boolean");
+  describe('#isEqualTo()', function() {
+    it('should return a boolean', function() {
+      expect(isEqualTo(40, 30)).to.be.a('boolean');
     });
-    it("should return false if num2 is greater than num1", function() {
+    it('should return false if num2 is greater than num1', function() {
       expect(isEqualTo(20, 200)).to.be.false;
     });
-    it("should return false if num2 is less than num1", function() {
+    it('should return false if num2 is less than num1', function() {
       expect(isEqualTo(20, 2)).to.be.false;
     });
-    it("should return true if the numbers are equal", function() {
+    it('should return true if the numbers are equal', function() {
       expect(isEqualTo(20, 20)).to.be.true;
     });
   });
 
-  describe("#isEven()", function() {
-    it("should return a boolean", function() {
-      expect(isEven(40)).to.be.a("boolean");
+  describe('#isEven()', function() {
+    it('should return a boolean', function() {
+      expect(isEven(40)).to.be.a('boolean');
     });
-    it("should return if the number is even", function() {
+    it('should return if the number is even', function() {
       expect(isEven(8)).to.be.true;
     });
-    it("should return true if the number is 0", function() {
+    it('should return true if the number is 0', function() {
       expect(isEven(0)).to.be.true;
     });
   });
 
-  describe("#isOdd()", function() {
-    it("should return a boolean", function() {
-      expect(isOdd(40)).to.be.a("boolean");
+  describe('#isOdd()', function() {
+    it('should return a boolean', function() {
+      expect(isOdd(40)).to.be.a('boolean');
     });
-    it("should return true if the number is odd", function() {
+    it('should return true if the number is odd', function() {
       expect(isOdd(7)).to.be.true;
     });
-    it("should return false if the number is 0", function() {
+    it('should return false if the number is 0', function() {
       expect(isOdd(0)).to.be.false;
     });
   });
 
-  describe("#isSameLength()", function() {
-    it("should return a boolean", function() {
-      expect(isSameLength("hi", "there")).to.be.a("boolean");
+  describe('#isSameLength()', function() {
+    it('should return a boolean', function() {
+      expect(isSameLength('hi', 'there')).to.be.a('boolean');
     });
-    it("should return true if the two words are the same length", function() {
-      expect(isSameLength("yes", "you")).to.be.true;
+    it('should return true if the two words are the same length', function() {
+      expect(isSameLength('yes', 'you')).to.be.true;
     });
-    it("should return false if the two words are not the same length", function() {
-      expect(isSameLength("hi", "there")).to.be.false;
+    it('should return false if the two words are not the same length', function() {
+      expect(isSameLength('hi', 'there')).to.be.false;
     });
   });
 
-  describe("#areBothOdd()", function () {
-    it("should return a boolean", function () {
-      expect(areBothOdd(40, 3)).to.be.a("boolean");
+  describe('#areBothOdd()', function () {
+    it('should return a boolean', function () {
+      expect(areBothOdd(40, 3)).to.be.a('boolean');
     });
-    it("should return true if both numbers are odd", function () {
+    it('should return true if both numbers are odd', function () {
       expect(areBothOdd(41, 3)).to.be.true;
     });
-    it("should return false if the first number is even", function () {
+    it('should return false if the first number is even', function () {
       expect(areBothOdd(4, 3)).to.be.false;
     });
-    it("should return false if the second number is even", function () {
+    it('should return false if the second number is even', function () {
       expect(areBothOdd(5, 30)).to.be.false;
     });
   });
 
-  describe("#isEitherEven()", function () {
-    it("should return a boolean", function () {
-      expect(isEitherEven(40, 3)).to.be.a("boolean");
+  describe('#isEitherEven()', function () {
+    it('should return a boolean', function () {
+      expect(isEitherEven(40, 3)).to.be.a('boolean');
     });
-    it("should return true if the first number is even", function () {
+    it('should return true if the first number is even', function () {
       expect(isEitherEven(4, 3)).to.be.true;
     });
-    it("should return true if the second number is even", function () {
+    it('should return true if the second number is even', function () {
       expect(isEitherEven(7, 30)).to.be.true;
     });
-    it("should return true if the both numbers are even", function () {
+    it('should return true if the both numbers are even', function () {
       expect(isEitherEven(70, 30)).to.be.true;
     });
-    it("should return false if both numbers are odd", function () {
+    it('should return false if both numbers are odd', function () {
       expect(isEitherEven(71, 31)).to.be.false;
     });
   });
 
-  describe("#isEvenLength()", function () {
-    it("should return a boolean", function () {
-      expect(isEvenLength("wow")).to.be.a('boolean');
+  describe('#isEvenLength()', function () {
+    it('should return a boolean', function () {
+      expect(isEvenLength('wow')).to.be.a('boolean');
     });
     it('should return if the length of the word is even', function () {
       expect(isEvenLength('specials')).to.be.true;
@@ -312,8 +313,8 @@ describe('SSP Problems', function() {
     });
   });
 
-  describe("isEvenAndGreaterThanTen", function () {
-    it("should return a boolean", function () {
+  describe('#isEvenAndGreaterThanTen()', function () {
+    it('should return a boolean', function () {
       expect(isEvenAndGreaterThanTen(40)).to.be.a('boolean');
     });
     it('should return true if the number is even and greater than 10', function () {
@@ -327,6 +328,18 @@ describe('SSP Problems', function() {
     });
     it('should return false if the number is 10', function () {
       expect(isEvenAndGreaterThanTen(10)).to.be.false;
+    });
+  });
+
+  describe('#isOddLength()', function () {
+    it('should return a boolean', function () {
+      expect(isOddLength('wow')).to.be.a('boolean');
+    });
+    it('should return if the length of the word is even', function () {
+      expect(isOddLength('special')).to.be.true;
+    });
+    it('should return false if the string is empty', function () {
+      expect(isOddLength('')).to.be.false;
     });
   });
 
