@@ -27,6 +27,8 @@ const isOddLength = require('../SSP/25_isOddLength.js');
 const average = require('../SSP/26_average.js');
 const computeAreaOfATriangle = require('../SSP/27_computeAreaOfTriangle.js');
 const cube = require('../SSP/28_cube.js');
+const square = require('../SSP/29_square.js');
+const computeAverageLengthOfWords = require('../SSP/30_computeAverageLengthOfWords.js');
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -380,6 +382,33 @@ describe('SSP Problems', function() {
     it("should_cube_a_negative_number", function () {
       expect(cube(-5)).to.equal(-125);
     });
-  })
+  });
+
+  describe('#square()', function () {
+    it('should_square_a_positive_number', function () {
+      expect(square(2)).to.equal(4);
+    });
+
+    it('should_square_0', function () {
+      expect(square(0)).to.equal(0);
+    });
+
+    it('should_square_a_number_greater_than_10', function () {
+      expect(square(12)).to.equal(144);
+    });
+
+    it('should_square_a_negative_number', function () {
+      expect(square(-5)).to.equal(25);
+    });
+  });
+
+  describe("#computeAverageLengthOfWords()", function () {
+    it("should return a number", function () {
+      expect(computeAverageLengthOfWords("these", "words")).to.be.a("number");
+    });
+    it("should return the average length of the two words", function () {
+      expect(computeAverageLengthOfWords("is", "this")).to.equal(3);
+    });
+  });
 
 }); 
