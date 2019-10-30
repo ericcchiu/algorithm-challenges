@@ -21,10 +21,10 @@ const searchString = (str, arrStr) => {
 
   if (arrStr.length === 0) return false; 
   if(str === arrStr[0]) return true; 
-  searchString(str, arrStr.slice(2)); 
+  return searchString(str, arrStr.slice(1)); 
 }
 
 let str = "x"; 
 let arr = ["a", "x", "c"]; 
 
-searchString(str, arr); 
+console.log(searchString(str, arr)); 
