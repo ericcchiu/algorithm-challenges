@@ -29,6 +29,7 @@ const computeAreaOfATriangle = require('../SSP/27_computeAreaOfTriangle.js');
 const cube = require('../SSP/28_cube.js');
 const square = require('../SSP/29_square.js');
 const computeAverageLengthOfWords = require('../SSP/30_computeAverageLengthOfWords.js');
+const addFullNameProperty = require('../SSP/31_addFullNameProperty.js');
 
 describe('SSP Problems', function() {
   describe('#isOldEnoughToDrink()', function() {
@@ -408,6 +409,17 @@ describe('SSP Problems', function() {
     });
     it("should return the average length of the two words", function () {
       expect(computeAverageLengthOfWords("is", "this")).to.equal(3);
+    });
+  });
+
+  describe("#addFullNameProperty()", function () {
+    it("should create a fullName property with the firstName and lastName separated by a space", function () {
+      var tim = {
+        firstName: "Tim",
+        lastName: "Goldfish"
+      };
+      addFullNameProperty(tim);
+      expect(tim.fullName).to.equal("Tim Goldfish");
     });
   });
 
