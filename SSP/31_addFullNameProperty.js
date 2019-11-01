@@ -15,7 +15,7 @@ console.log(person.fullName); // --> 'Jade Smith'
 
 const addFullNameProperty = obj => {
   let { firstName, lastName } = obj; 
-  return obj[fullName] = firstName + ' ' + lastName; 
+  return obj.fullName = firstName + ' ' + lastName; 
 }
 
 var person = {
@@ -23,4 +23,6 @@ var person = {
   lastName: 'Smith'
 };
 addFullNameProperty(person);
-console.log(person.fullName); // --> 'Jade Smith'
+// console.log(person.fullName); // --> 'Jade Smith'
+
+module.exports = addFullNameProperty;
